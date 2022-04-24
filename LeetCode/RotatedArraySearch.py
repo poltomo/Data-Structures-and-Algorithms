@@ -1,5 +1,7 @@
+# 33
 class Solution:
-    def search(self, arr, target) -> int:
+    @staticmethod
+    def search(arr, target) -> int:
         n=len(arr)
         if arr==None or n==0: return -1
         
@@ -19,7 +21,7 @@ class Solution:
         if target>=arr[start] and target<=arr[max]:
             min=start
         else:
-            max=start
+            max=start-1
         
         while max>=min:
             mid=(max+min)//2
@@ -31,6 +33,4 @@ class Solution:
                 max=mid-1
         return -1
 
-
-solution=Solution()
-print(solution.search([0,1,2,3,4,5,6],0))
+print(Solution.search([4,5,6,7,0,1,2],0))
