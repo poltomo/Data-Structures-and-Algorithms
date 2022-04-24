@@ -1,5 +1,3 @@
-package Linkedlist;
-
 public class Linkedlist{
   Node head;
 
