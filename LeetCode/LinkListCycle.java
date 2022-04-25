@@ -1,17 +1,14 @@
-/**
- * Definition for singly-linked list.
- * class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) {
- *         val = x;
- *         next = null;
- *     }
- * }
- */
-
+// 141
 package LeetCode;
 public class LinkListCycle {
+    private class ListNode {
+        int val;
+        ListNode next;
+        ListNode(int x) {
+            val = x;
+            next = null;
+        }
+    }
     public boolean hasCycle(ListNode head) {
         if (head==null){
             return false;
