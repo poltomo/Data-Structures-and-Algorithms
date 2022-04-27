@@ -20,7 +20,8 @@ class BinarySearchRec{
       int[] arr={0,1,2,3,4,5,6,7,8,9};
       //         0,1,2,3,4,5,6,7,8,9
       for (int num:arr){
-          System.out.println(binSearch(arr,num,0,arr.length));
+          System.out.println(binSearch(arr,num,0,arr.length-1));
       }
+      System.out.println(binSearch(arr,12,0,arr.length-1));
   }
 }
