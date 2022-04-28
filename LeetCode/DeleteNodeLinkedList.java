@@ -7,6 +7,7 @@
  *     ListNode(int x) { val = x; }
  * }
  */
+package LeetCode;
 class DeleteNodeLinkedList {
     public void deleteNode(ListNode node) {
         ListNode curr=node;

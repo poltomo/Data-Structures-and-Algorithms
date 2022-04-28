@@ -9,6 +9,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+package LeetCode;
 class LinkedListRemove {
     public ListNode removeElements(ListNode head, int val) {
         ListNode sentinel = new ListNode(0,head);

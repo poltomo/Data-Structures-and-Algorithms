@@ -9,7 +9,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-package Leetcode;
+package LeetCode;
 class MiddleLinkedList {
     public ListNode middleNode(ListNode head) {
         ListNode slow = head;
