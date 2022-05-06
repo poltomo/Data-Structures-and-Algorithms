@@ -16,6 +16,51 @@ public class Linkedlist{
     this.head=new Node(val);
   }
 
+  public Node prepend(int val){
+    if (head==null){
+      head=new Node(val);
+      return head;
+    }
+
+    Node newHead=new Node(val);
+    newHead.next=head;
+
+    head=newHead;
+    return head;
+  }
+  public Node append(int val){
+    if (head==null){
+      head=new Node(val);
+      return head;
+    }
+
+    curr=head;
+    while (curr.next!=null){
+      curr=curr.next;
+    }
+
+    curr.next = new Node(val)
+    return curr.next;
+  }
+  public void lpop(){
+    if (head==null){
+      return;
+    }
+    head=head.next;
+  }
+  public void pop(){
+    if (head==null){
+      return;
+    }
+
+    curr=head;
+    while (curr.next!=null){
+      curr=curr.next;
+    }
+
+    curr=null;
+  }
+
   public Node insert(Node node, int val){
       if (node==null){
           node=new Node(val);
