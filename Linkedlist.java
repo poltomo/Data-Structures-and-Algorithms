@@ -22,10 +22,10 @@ public class Linkedlist{
       return head;
     }
 
-    Node newHead=new Node(val);
-    newHead.next=head;
+    Node newNode=new Node(val);
+    newNode.next=head;
 
-    head=newHead;
+    head=newNode;
     return head;
   }
   public Node append(int val){
@@ -34,37 +34,53 @@ public class Linkedlist{
       return head;
     }
 
-    curr=head;
+    Node curr=head;
     while (curr.next!=null){
       curr=curr.next;
     }
 
-    curr.next = new Node(val)
+    curr.next = new Node(val);
     return curr.next;
-  }
-  public void lpop(){
-    if (head==null){
-      return;
-    }
-    head=head.next;
   }
   public void pop(){
     if (head==null){
       return;
     }
-
-    curr=head;
-    while (curr.next!=null){
+    head=head.next;
+  }
+  public void rpop(){
+    if (head==null){
+      return;
+    }
+    Node curr=head;
+    while (curr.next.next!=null){
       curr=curr.next;
     }
 
-    curr=null;
+    curr.next=null;
   }
 
-  public Node insert(Node node, int val){
-      if (node==null){
-          node=new Node(val);
-          return node;
+  public void insert(Node prevNode){
+    if (prevNode==null){
+      return;
+    }
+    
+  }
+
+  public int size(){
+    Node curr=head;
+    int count=0;
+    while (curr!=null){
+      count++;
+      curr=curr.next;
+    }
+    return count;
+  }
+
+  /*public Node insert(Node prevNode, int val){
+      if (prevNode==null){
+          prevNode=new Node(val);
+          return prevNode;
       }
 
       Node temp=node;
@@ -80,64 +96,24 @@ public class Linkedlist{
           curr=curr.next;
       }
 
-  }
+  }*/
 
   public void push(int val){
     Node current=head;
-    while (current.val!=null){
+    while (current!=null){
       current=current.next;
     }
     current.val=val;
     current.next=new Node();
   }
 
-  public void pop(){
-    Node current=head;
-    while (current.next.val!=null){
-      current=current.next;
+  public String toString(){
+    String llist="";
+    Node curr=head;
+    while (curr!=null){
+      llist+=curr.val+" ";
+      curr=curr.next;
     }
-    current.val=null;
-    current.next=null;
-  }
-
-  public void print(){
-    Node current=head;
-    while (current.val!=null){
-      System.out.println(current.val);
-      current=current.next;
-    }
-  }
-  /*
-  public int getValue(int index){
-    Node current=head;
-    i=0;
-    while (current.val!=null){
-      System.out.println(current.val);
-      current=current.next;
-    }
-  }
-  */
-
-
-  public static void main(int[] args){
-    Linkedlist llist= new Linkedlist();
-    llist.push("bob");
-    llist.push("joe");
-    llist.push("tom");
-    llist.pop();
-    llist.print();
-
-    System.out.println();
-
-    System.out.println(llist.head);
-    System.out.println(llist.head.val);
-
-    System.out.println(llist.head.next);
-    System.out.println(llist.head.next.val);
-
-    System.out.println(llist.head.next.next);
-    System.out.println(llist.head.next.next.val);
-
-    System.out.println(llist.head.next.next.next);
+    return llist;
   }
 }
