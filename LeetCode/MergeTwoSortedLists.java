@@ -1,3 +1,5 @@
+package LeetCode;
+
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -8,6 +10,7 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
+/*
 class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode a = list1;
@@ -17,7 +20,7 @@ class MergeTwoSortedLists {
         
         ListNode c = result;
         
-        while (a!=null and b!=null){
+        while (a!=null && b!=null){
             if (a.val<=a.val){
                 a=a.next;
             } else {
@@ -29,3 +32,4 @@ class MergeTwoSortedLists {
         
     }
 }
+*/
