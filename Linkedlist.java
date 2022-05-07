@@ -116,4 +116,16 @@ public class Linkedlist{
     }
     return llist;
   }
+  public static void main(String[] args){
+    Linkedlist llist= new Linkedlist();
+    llist.append(5);
+    llist.append(4);
+    llist.prepend(3);
+    llist.pop();
+    llist.append(7);
+    
+    System.out.println(llist);
+    System.out.println(llist.size());
+
+  }
 }
